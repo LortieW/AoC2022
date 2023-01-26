@@ -4,7 +4,6 @@ def main():
     with open("./input.txt", "r") as f:
         for head_line in f:
             elf_A, elf_B, elf_C = set(head_line[:-1]), set(next(f)[:-1]), set(next(f)[:-1])
-            print(f'{elf_A},{elf_B},{elf_C}')
             for item in elf_A:
                 if item in elf_B and item in elf_C:
                     total_priority += get_priority(item)
